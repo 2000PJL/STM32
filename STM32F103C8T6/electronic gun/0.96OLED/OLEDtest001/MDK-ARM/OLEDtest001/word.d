@@ -1,0 +1,11 @@
+oledtest001\word.o: ..\Core\Src\word.c
+oledtest001\word.o: ../Core/Inc/word.h
+oledtest001\word.o: D:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h
+oledtest001\word.o: .\RTE\_OLEDtest001\RTE_Components.h
+oledtest001\word.o: ../Drivers/CMSIS/Include/core_cm3.h
+oledtest001\word.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+oledtest001\word.o: ../Drivers/CMSIS/Include/cmsis_version.h
+oledtest001\word.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
+oledtest001\word.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
+oledtest001\word.o: D:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h
+oledtest001\word.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h

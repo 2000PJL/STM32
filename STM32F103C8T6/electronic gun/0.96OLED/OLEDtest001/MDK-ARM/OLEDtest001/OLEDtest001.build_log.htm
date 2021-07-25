@@ -1,0 +1,128 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.29.0.0
+Copyright (C) 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 1 1, 1, LIC=EXJT4-F5EN9-63HMB-22R9D-7MG30-1G9N4
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.29.0.0
+Toolchain Path:  D:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.29.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      CMSIS_AGDI.dll V1.32.0.0
+Dialog DLL:      TCM.DLL V1.36.5.0
+ 
+<h2>Project:</h2>
+G:\code\STM32\STM32F103C8T6\electronic gun\0.96OLED\OLEDtest001\MDK-ARM\OLEDtest001.uvprojx
+Project File Date:  07/04/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'OLEDtest001'
+compiling oled.c...
+..\Core\Src\oled.c(232): error:  #20: identifier "chr1" is undefined
+  	chr1=chr-' ';  //计算偏移后的值
+..\Core\Src\oled.c(289): error:  #20: identifier "\u663e\u793a2\u4e2a\u6570\u5b57" is undefined
+  显示2个数字
+..\Core\Src\oled.c(290): error:  #65: expected a ";"
+  x,y :起点坐标	 
+..\Core\Src\oled.c(337): warning:  #12-D: parsing restarts here after previous syntax error
+  								if(temp&0x01)OLED_DrawPoint(x,y);
+..\Core\Src\oled.c(338): error:  #169: expected a declaration
+  								else OLED_ClearPoint(x,y);
+..\Core\Src\oled.c(339): error:  #77-D: this declaration has no storage class or type specifier
+  								temp>>=1;
+..\Core\Src\oled.c(339): error:  #65: expected a ";"
+  								temp>>=1;
+..\Core\Src\oled.c(340): error:  #77-D: this declaration has no storage class or type specifier
+  								y++;
+..\Core\Src\oled.c(340): error:  #65: expected a ";"
+  								y++;
+..\Core\Src\oled.c(341): error:  #169: expected a declaration
+  							}
+..\Core\Src\oled.c(343): error:  #169: expected a declaration
+  							if((x-x0)==size1)
+..\Core\Src\oled.c(346): error:  #169: expected a declaration
+  			 }
+..\Core\Src\oled.c(375): warning:  #12-D: parsing restarts here after previous syntax error
+          t=0;
+..\Core\Src\oled.c(376): error:  #169: expected a declaration
+        }
+..\Core\Src\oled.c(378): error:  #169: expected a declaration
+  		if(m==16){m=0;}
+..\Core\Src\oled.c(386): warning:  #12-D: parsing restarts here after previous syntax error
+  		OLED_Refresh();
+..\Core\Src\oled.c(387): error:  #169: expected a declaration
+  	}
+..\Core\Src\oled.c(448): warning:  #12-D: parsing restarts here after previous syntax error
+  	OLED_WR_Byte(0x80,OLED_CMD);//--set divide ratio, Set Clock as 100 Frames/Sec
+..\Core\Src\oled.c(449): error:  #79: expected a type specifier
+  	OLED_WR_Byte(0xD9,OLED_CMD);//--set pre-charge period
+..\Core\Src\oled.c(449): error:  #79: expected a type specifier
+  	OLED_WR_Byte(0xD9,OLED_CMD);//--set pre-charge period
+..\Core\Src\oled.c(449): error:  #260-D: explicit type is missing ("int" assumed)
+  	OLED_WR_Byte(0xD9,OLED_CMD);//--set pre-charge period
+..\Core\Src\oled.c(449): error:  #147: declaration is incompatible with "void OLED_WR_Byte(unsigned char, unsigned char)"  (declared at line 65)
+  	OLED_WR_Byte(0xD9,OLED_CMD);//--set pre-charge period
+..\Core\Src\oled.c(450): error:  #79: expected a type specifier
+  	OLED_WR_Byte(0xF1,OLED_CMD);//Set Pre-Charge as 15 Clocks & Discharge as 1 Clock
+..\Core\Src\oled.c(450): error:  #79: expected a type specifier
+  	OLED_WR_Byte(0xF1,OLED_CMD);//Set Pre-Charge as 15 Clocks & Discharge as 1 Clock
+..\Core\Src\oled.c(450): error:  #260-D: explicit type is missing ("int" assumed)
+  	OLED_WR_Byte(0xF1,OLED_CMD);//Set Pre-Charge as 15 Clocks & Discharge as 1 Clock
+..\Core\Src\oled.c(451): error:  #79: expected a type specifier
+  	OLED_WR_Byte(0xDA,OLED_CMD);//--set com pins hardware configuration
+..\Core\Src\oled.c(451): error:  #79: expected a type specifier
+  	OLED_WR_Byte(0xDA,OLED_CMD);//--set com pins hardware configuration
+..\Core\Src\oled.c(451): error:  #260-D: explicit type is missing ("int" assumed)
+  	OLED_WR_Byte(0xDA,OLED_CMD);//--set com pins hardware configuration
+..\Core\Src\oled.c(452): error:  #79: expected a type specifier
+  	OLED_WR_Byte(0x12,OLED_CMD);
+..\Core\Src\oled.c(452): error:  #79: expected a type specifier
+  	OLED_WR_Byte(0x12,OLED_CMD);
+..\Core\Src\oled.c(452): error:  #260-D: explicit type is missing ("int" assumed)
+  	OLED_WR_Byte(0x12,OLED_CMD);
+..\Core\Src\oled.c(453): error:  #79: expected a type specifier
+  	OLED_WR_Byte(0xDB,OLED_CMD);//--set vcomh
+..\Core\Src\oled.c(453): error:  #79: expected a type specifier
+  	OLED_WR_Byte(0xDB,OLED_CMD);//--set vcomh
+..\Core\Src\oled.c(453): error:  #260-D: explicit type is missing ("int" assumed)
+  	OLED_WR_Byte(0xDB,OLED_CMD);//--set vcomh
+..\Core\Src\oled.c: 4 warnings, 30 errors
+"OLEDtest001\OLEDtest001.axf" - 30 Error(s), 4 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.3.0.pack
+                Keil.STM32F1xx_DFP.2.3.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_OLEDtest001
+  D:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  D:\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+      Include file:  CMSIS\Core\Include\tz_context.h
+Target not created.
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>

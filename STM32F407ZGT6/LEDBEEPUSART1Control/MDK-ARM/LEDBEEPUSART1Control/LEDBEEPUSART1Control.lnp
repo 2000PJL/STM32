@@ -1,0 +1,28 @@
+--cpu=Cortex-M4.fp.sp
+"ledbeepusart1control\startup_stm32f407xx.o"
+"ledbeepusart1control\main.o"
+"ledbeepusart1control\gpio.o"
+"ledbeepusart1control\usart.o"
+"ledbeepusart1control\stm32f4xx_it.o"
+"ledbeepusart1control\stm32f4xx_hal_msp.o"
+"ledbeepusart1control\stm32f4xx_hal_tim.o"
+"ledbeepusart1control\stm32f4xx_hal_tim_ex.o"
+"ledbeepusart1control\stm32f4xx_hal_uart.o"
+"ledbeepusart1control\stm32f4xx_hal_rcc.o"
+"ledbeepusart1control\stm32f4xx_hal_rcc_ex.o"
+"ledbeepusart1control\stm32f4xx_hal_flash.o"
+"ledbeepusart1control\stm32f4xx_hal_flash_ex.o"
+"ledbeepusart1control\stm32f4xx_hal_flash_ramfunc.o"
+"ledbeepusart1control\stm32f4xx_hal_gpio.o"
+"ledbeepusart1control\stm32f4xx_hal_dma_ex.o"
+"ledbeepusart1control\stm32f4xx_hal_dma.o"
+"ledbeepusart1control\stm32f4xx_hal_pwr.o"
+"ledbeepusart1control\stm32f4xx_hal_pwr_ex.o"
+"ledbeepusart1control\stm32f4xx_hal_cortex.o"
+"ledbeepusart1control\stm32f4xx_hal.o"
+"ledbeepusart1control\stm32f4xx_hal_exti.o"
+"ledbeepusart1control\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter "LEDBEEPUSART1Control\LEDBEEPUSART1Control.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "LEDBEEPUSART1Control.map" -o LEDBEEPUSART1Control\LEDBEEPUSART1Control.axf

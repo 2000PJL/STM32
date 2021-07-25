@@ -1,0 +1,12 @@
+wifilighttest228\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/port.c
+wifilighttest228\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+wifilighttest228\port.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+wifilighttest228\port.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+wifilighttest228\port.o: ../Core/Inc/FreeRTOSConfig.h
+wifilighttest228\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+wifilighttest228\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+wifilighttest228\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+wifilighttest228\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+wifilighttest228\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+wifilighttest228\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+wifilighttest228\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h

@@ -1,0 +1,26 @@
+--cpu Cortex-M3
+"ledtest001\startup_stm32f103xb.o"
+"ledtest001\main.o"
+"ledtest001\gpio.o"
+"ledtest001\usart.o"
+"ledtest001\stm32f1xx_it.o"
+"ledtest001\stm32f1xx_hal_msp.o"
+"ledtest001\stm32f1xx_hal_gpio_ex.o"
+"ledtest001\stm32f1xx_hal_tim.o"
+"ledtest001\stm32f1xx_hal_tim_ex.o"
+"ledtest001\stm32f1xx_hal_uart.o"
+"ledtest001\stm32f1xx_hal.o"
+"ledtest001\stm32f1xx_hal_rcc.o"
+"ledtest001\stm32f1xx_hal_rcc_ex.o"
+"ledtest001\stm32f1xx_hal_gpio.o"
+"ledtest001\stm32f1xx_hal_dma.o"
+"ledtest001\stm32f1xx_hal_cortex.o"
+"ledtest001\stm32f1xx_hal_pwr.o"
+"ledtest001\stm32f1xx_hal_flash.o"
+"ledtest001\stm32f1xx_hal_flash_ex.o"
+"ledtest001\stm32f1xx_hal_exti.o"
+"ledtest001\system_stm32f1xx.o"
+--library_type=microlib --strict --scatter "LEDtest001\LEDtest001.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "LEDtest001.map" -o LEDtest001\LEDtest001.axf

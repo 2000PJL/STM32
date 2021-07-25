@@ -1,0 +1,11 @@
+lightwarmwifitest228\light.o: ..\Core\Src\light.c
+lightwarmwifitest228\light.o: ../Core/Inc/light.h
+lightwarmwifitest228\light.o: ../Core/Inc/light.h
+lightwarmwifitest228\light.o: ../Core/Inc/light.h
+lightwarmwifitest228\light.o: ../Core/Inc/light.h
+lightwarmwifitest228\light.o: ../Core/Inc/light.h
+lightwarmwifitest228\light.o: ../Core/Inc/light.h
+lightwarmwifitest228\light.o: ../Core/Inc/light.h
+lightwarmwifitest228\light.o: ../Core/Inc/light.h
+lightwarmwifitest228\light.o: ../Core/Inc/light.h
+lightwarmwifitest228\light.o: ../Core/Inc/light.h
