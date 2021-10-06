@@ -97,7 +97,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-		HAL_Delay(1000);
+		HAL_Delay(2000);
 		printf("当前温度为：%d ℃\r\n",	Get_Temp(&hadc1));
 		printf("(高精度版本)当前温度为：%.2lf ℃\r\n",Get_Temp_Precise(&hadc1));
 		printf("(高精度PJL版本)当前温度为：%.2lf ℃\r\n",Get_Temp_PJL(&hadc1));

@@ -1,5 +1,7 @@
 ntctest03\ntc.o: ..\Core\Src\NTC.c
 ntctest03\ntc.o: ../Core/Inc/NTC.h
+ntctest03\ntc.o: ../Core/Inc/adc.h
+ntctest03\ntc.o: ../Core/Inc/main.h
 ntctest03\ntc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 ntctest03\ntc.o: ../Core/Inc/stm32f4xx_hal_conf.h
 ntctest03\ntc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
@@ -32,9 +34,5 @@ ntctest03\ntc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc
 ntctest03\ntc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 ntctest03\ntc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
 ntctest03\ntc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
-ntctest03\ntc.o: ../Core/Inc/usart.h
-ntctest03\ntc.o: ../Core/Inc/main.h
-ntctest03\ntc.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-ntctest03\ntc.o: ../Core/Inc/adc.h
 ntctest03\ntc.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 ntctest03\ntc.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
