@@ -1,0 +1,26 @@
+--cpu Cortex-M3
+"pwm_output\startup_stm32f103xe.o"
+"pwm_output\main.o"
+"pwm_output\gpio.o"
+"pwm_output\usart.o"
+"pwm_output\stm32f1xx_it.o"
+"pwm_output\stm32f1xx_hal_msp.o"
+"pwm_output\stm32f1xx_hal_gpio_ex.o"
+"pwm_output\stm32f1xx_hal_tim.o"
+"pwm_output\stm32f1xx_hal_tim_ex.o"
+"pwm_output\stm32f1xx_hal_uart.o"
+"pwm_output\stm32f1xx_hal.o"
+"pwm_output\stm32f1xx_hal_rcc.o"
+"pwm_output\stm32f1xx_hal_rcc_ex.o"
+"pwm_output\stm32f1xx_hal_gpio.o"
+"pwm_output\stm32f1xx_hal_dma.o"
+"pwm_output\stm32f1xx_hal_cortex.o"
+"pwm_output\stm32f1xx_hal_pwr.o"
+"pwm_output\stm32f1xx_hal_flash.o"
+"pwm_output\stm32f1xx_hal_flash_ex.o"
+"pwm_output\stm32f1xx_hal_exti.o"
+"pwm_output\system_stm32f1xx.o"
+--strict --scatter "PWM_OutPut\PWM_OutPut.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "PWM_OutPut.map" -o PWM_OutPut\PWM_OutPut.axf

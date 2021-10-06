@@ -47,7 +47,8 @@ uint8_t str_buff[64];
 
 void UR1_Send_Info(){
   sprintf((char *)str_buff,"采样值:%d,光敏值:%d.%d%dV\r\n",ADC_Value1,ADC_LIGHT/100,(ADC_LIGHT%100)/10,ADC_LIGHT%10);	
-	HAL_UART_Transmit(&huart1,str_buff,sizeof(str_buff),1000);
+	//HAL_UART_Transmit(&huart1,str_buff,sizeof(str_buff),1000);
+	printf("%s",str_buff);
 }
 /* USER CODE END PTD */
 
@@ -158,7 +159,7 @@ void StartLightTask(void const * argument)
 	UR1_Send_Info();
 	osDelay(100);
 	LED0_OFF();
-	osDelay(100);
+	osDelay(1000);
 	HAL_ADC_Stop(&hadc1);
 
 		

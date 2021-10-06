@@ -1,0 +1,26 @@
+--cpu Cortex-M3
+"ntctest01\startup_stm32f103xe.o"
+"ntctest01\main.o"
+"ntctest01\gpio.o"
+"ntctest01\usart.o"
+"ntctest01\stm32f1xx_it.o"
+"ntctest01\stm32f1xx_hal_msp.o"
+"ntctest01\stm32f1xx_hal_gpio_ex.o"
+"ntctest01\stm32f1xx_hal_tim.o"
+"ntctest01\stm32f1xx_hal_tim_ex.o"
+"ntctest01\stm32f1xx_hal_uart.o"
+"ntctest01\stm32f1xx_hal.o"
+"ntctest01\stm32f1xx_hal_rcc.o"
+"ntctest01\stm32f1xx_hal_rcc_ex.o"
+"ntctest01\stm32f1xx_hal_gpio.o"
+"ntctest01\stm32f1xx_hal_dma.o"
+"ntctest01\stm32f1xx_hal_cortex.o"
+"ntctest01\stm32f1xx_hal_pwr.o"
+"ntctest01\stm32f1xx_hal_flash.o"
+"ntctest01\stm32f1xx_hal_flash_ex.o"
+"ntctest01\stm32f1xx_hal_exti.o"
+"ntctest01\system_stm32f1xx.o"
+--strict --scatter "NTCtest01\NTCtest01.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "NTCtest01.map" -o NTCtest01\NTCtest01.axf

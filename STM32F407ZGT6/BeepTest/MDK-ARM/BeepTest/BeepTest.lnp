@@ -1,0 +1,26 @@
+--cpu=Cortex-M4.fp.sp
+"beeptest\startup_stm32f407xx.o"
+"beeptest\main.o"
+"beeptest\gpio.o"
+"beeptest\stm32f4xx_it.o"
+"beeptest\stm32f4xx_hal_msp.o"
+"beeptest\stm32f4xx_hal_tim.o"
+"beeptest\stm32f4xx_hal_tim_ex.o"
+"beeptest\stm32f4xx_hal_rcc.o"
+"beeptest\stm32f4xx_hal_rcc_ex.o"
+"beeptest\stm32f4xx_hal_flash.o"
+"beeptest\stm32f4xx_hal_flash_ex.o"
+"beeptest\stm32f4xx_hal_flash_ramfunc.o"
+"beeptest\stm32f4xx_hal_gpio.o"
+"beeptest\stm32f4xx_hal_dma_ex.o"
+"beeptest\stm32f4xx_hal_dma.o"
+"beeptest\stm32f4xx_hal_pwr.o"
+"beeptest\stm32f4xx_hal_pwr_ex.o"
+"beeptest\stm32f4xx_hal_cortex.o"
+"beeptest\stm32f4xx_hal.o"
+"beeptest\stm32f4xx_hal_exti.o"
+"beeptest\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter "BeepTest\BeepTest.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "BeepTest.map" -o BeepTest\BeepTest.axf

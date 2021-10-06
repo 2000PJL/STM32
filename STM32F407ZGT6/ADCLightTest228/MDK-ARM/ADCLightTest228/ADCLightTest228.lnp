@@ -1,5 +1,6 @@
 --cpu=Cortex-M4.fp.sp
 "adclighttest228\startup_stm32f407xx.o"
+"adclighttest228\light.o"
 "adclighttest228\main.o"
 "adclighttest228\gpio.o"
 "adclighttest228\freertos.o"
@@ -7,7 +8,6 @@
 "adclighttest228\usart.o"
 "adclighttest228\stm32f4xx_it.o"
 "adclighttest228\stm32f4xx_hal_msp.o"
-"adclighttest228\light.o"
 "adclighttest228\stm32f4xx_hal_adc.o"
 "adclighttest228\stm32f4xx_hal_adc_ex.o"
 "adclighttest228\stm32f4xx_ll_adc.o"
