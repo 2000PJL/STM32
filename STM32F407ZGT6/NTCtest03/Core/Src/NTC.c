@@ -92,9 +92,7 @@ double Get_Temp_PJL(ADC_HandleTypeDef *ADC_channel)
 	u16 adc_value=Get_ADC(ADC_channel);
 	double R_Value,T_Value;
 	R_Value=(adc_value*10000.0/(4096.0-adc_value));
-	printf("µç×è£º%lf\r\n",R_Value);
 	T_Value=1.0/((1.0/298.15)+((log(R_Value/10000.0)/log(2.71828))/3950.0));
-	//printf("%lf\r\n",T_Value);
 	return T_Value-273.15;
 }
 
