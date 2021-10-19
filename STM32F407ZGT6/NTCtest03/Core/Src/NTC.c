@@ -108,7 +108,13 @@ double Get_Temp_Precise(ADC_HandleTypeDef *ADC_channel)//获取温度，通过查电阻-温
 ***********************************************/
 double Get_Temp_PJL(ADC_HandleTypeDef *ADC_channel)
 {
-	u16 adc_value=Get_ADC(ADC_channel);
+	u16 adc_value=0,adc_value1=0,train=0;
+	for(;train<10;train++){
+			 adc_value1=Get_ADC(ADC_channel);
+		   adc_value=(adc_value+adc_value1);
+		  // HAL_Delay(5);
+	 }
+	 adc_value=adc_value/10;
 	double R_Value,T_Value;
 	double B_Value=3950.0,//NTC系数
 		     R0_Value=10000.0;//热敏电阻25摄氏度下的阻值

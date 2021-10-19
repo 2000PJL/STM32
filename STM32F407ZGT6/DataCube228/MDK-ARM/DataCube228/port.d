@@ -1,0 +1,12 @@
+datacube228\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/port.c
+datacube228\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+datacube228\port.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+datacube228\port.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+datacube228\port.o: ../Core/Inc/FreeRTOSConfig.h
+datacube228\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+datacube228\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+datacube228\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+datacube228\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+datacube228\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+datacube228\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+datacube228\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
