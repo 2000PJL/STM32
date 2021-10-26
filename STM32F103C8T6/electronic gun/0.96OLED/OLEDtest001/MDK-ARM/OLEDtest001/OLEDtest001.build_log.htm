@@ -28,8 +28,12 @@ Project File Date:  07/04/2021
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'OLEDtest001'
 compiling oled.c...
-..\Core\Src\oled.c(232): error:  #20: identifier "chr1" is undefined
-  	chr1=chr-' ';  //计算偏移后的值
+..\Core\Src\oled.c(236): error:  #20: identifier "asc2_1206" is undefined
+          {temp=asc2_1206[chr1][i];} //调用12 06字体
+..\Core\Src\oled.c(238): error:  #20: identifier "asc2_1608" is undefined
+          {temp=asc2_1608[chr1][i];} //调用16 08字体
+..\Core\Src\oled.c(240): error:  #20: identifier "asc2_2412" is undefined
+          {temp=asc2_2412[chr1][i];} //调用24 12字体
 ..\Core\Src\oled.c(289): error:  #20: identifier "\u663e\u793a2\u4e2a\u6570\u5b57" is undefined
   显示2个数字
 ..\Core\Src\oled.c(290): error:  #65: expected a ";"
@@ -91,10 +95,6 @@ compiling oled.c...
 ..\Core\Src\oled.c(452): error:  #260-D: explicit type is missing ("int" assumed)
   	OLED_WR_Byte(0x12,OLED_CMD);
 ..\Core\Src\oled.c(453): error:  #79: expected a type specifier
-  	OLED_WR_Byte(0xDB,OLED_CMD);//--set vcomh
-..\Core\Src\oled.c(453): error:  #79: expected a type specifier
-  	OLED_WR_Byte(0xDB,OLED_CMD);//--set vcomh
-..\Core\Src\oled.c(453): error:  #260-D: explicit type is missing ("int" assumed)
   	OLED_WR_Byte(0xDB,OLED_CMD);//--set vcomh
 ..\Core\Src\oled.c: 4 warnings, 30 errors
 "OLEDtest001\OLEDtest001.axf" - 30 Error(s), 4 Warning(s).
