@@ -152,42 +152,42 @@ void StartRS485ReadTask(void const * argument)
 			if(event.value.v == 0)
 			{
 				rs485_sendData("open_led0", 10);
-				printf("点亮了LED0");
+				printf("点亮了LED0\r\n");
 			}
 			else if(event.value.v == 1)
 			{
 				rs485_sendData("open_led1", 10);
-				printf("点亮了LED1");
+				printf("点亮了LED1\r\n");
 			}
 			else if(event.value.v == 2)
 			{
 				rs485_sendData("open_beep", 10);
-				printf("打开了蜂鸣器");
+				printf("打开了蜂鸣器\r\n");
 			}
 			else if(event.value.v == 3)
 			{
 				rs485_sendData("close_led0", 10);
-				printf("关闭了LED0");
+				printf("关闭了LED0\r\n");
 			}
 			else if(event.value.v == 4)
 			{
 				rs485_sendData("close_led1", 10);
-				printf("关闭了LED1");
+				printf("关闭了LED1\r\n");
 			}
 			else if(event.value.v == 5)
 			{
 				rs485_sendData("close_beep", 10);
-				printf("关闭了蜂鸣器");
+				printf("关闭了蜂鸣器\r\n");
 			}
 			else if(event.value.v == 6)
 			{
 				rs485_sendData("open_led2", 10);
-				printf("点亮了LED2");
+				printf("点亮了LED2\r\n");
 			}
 			else if(event.value.v == 7)
 			{
 				rs485_sendData("close_led2", 10);
-				printf("关闭了LED2");
+				printf("关闭了LED2\r\n");
 			}
 		}
   }
@@ -210,9 +210,9 @@ void StartRS485WriteTask(void const * argument)
   {
     if(get_message((char*)receive)==1)
 		{
-			printf("消息是%s\r\n",receive);
+			printf("收到的消息是%s\r\n",receive);
 			if(strcmp((char *)receive, "init") == 0)
-				printf("我要初始化了");
+				printf("我要初始化另外一台设备了\r\n");
 				//MX_GPIO_Init();
 			else if(strcmp((char *)receive, "open_led0") == 0)
 				HAL_GPIO_WritePin(LED0_GPIO_Port, LED0_Pin, GPIO_PIN_RESET);

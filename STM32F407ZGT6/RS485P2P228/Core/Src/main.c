@@ -57,6 +57,7 @@ uint8_t led0 = 0;
 uint8_t led1 = 0;
 uint8_t led2 = 0;
 uint8_t beep = 0;
+uint8_t key_old=0;
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -64,7 +65,8 @@ uint8_t beep = 0;
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
-	switch(GPIO_Pin)
+	uint16_t key_flag;
+	switch(key_flag)
 	{
 		case KEY0_Pin:
 			if(led0 == 0)

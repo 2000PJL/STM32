@@ -112,7 +112,7 @@ void rs485_receive_interrupt(void)
 		}
 		else if(RS485_buffer=='$')		                         //如果E，表示是命令信息传送的结束位
 		{
-			printf("get msg\r\n");
+			printf("收到了消息\r\n");
 			//发送机用于确认对方收到消息的代码
 			if(strcmp("clicent_receive",(char *)RS485_receive_str)==0)  {
 				clicent_receive=1;	
