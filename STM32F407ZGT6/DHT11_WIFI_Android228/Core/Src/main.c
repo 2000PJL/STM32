@@ -91,10 +91,15 @@ int main(void)
   MX_GPIO_Init();
   MX_UART4_Init();
   MX_USART1_UART_Init();
+  MX_USART6_UART_Init();
   /* USER CODE BEGIN 2 */
-
-	ESP8266_Station_Config();
+ LED0_ON();
+ printf("初始化完成\r\n");
+  ESP8266_Station_Config();
+   LED1_ON();
   DHT11_Init();
+   LED2_ON();
+  printf("初始化完成\r\n");
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in freertos.c) */

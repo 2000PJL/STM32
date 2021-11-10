@@ -118,7 +118,7 @@ void MX_FREERTOS_Init(void) {
   DHT11TaskHandle = osThreadCreate(osThread(DHT11Task), NULL);
 
   /* definition and creation of WIFITask */
-  osThreadDef(WIFITask, StartWIFITask, osPriorityBelowNormal, 0, 128);
+  osThreadDef(WIFITask, StartWIFITask, osPriorityIdle, 0, 128);
   WIFITaskHandle = osThreadCreate(osThread(WIFITask), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
@@ -138,13 +138,13 @@ void StartDHT11Task(void const * argument)
 {
   /* USER CODE BEGIN StartDHT11Task */
   /* Infinite loop */
-	osThreadSuspend(DHT11TaskHandle);
+	//osThreadSuspend(DHT11TaskHandle);
   for(;;)
   { 
 		
     if(DHT11_Read_TempAndHumidity(&dht11_data)==SUCCESS)
 		{
-			      sprintf(tx_buf, "%.2f %.2f\n", dht11_data.temperature, dht11_data.humidity);
+			sprintf(tx_buf, "%.2f %.2f\n", dht11_data.temperature, dht11_data.humidity);
             Wifi_SendData("AT+CIPSEND=0,12\r\n");
             printf("%s\r\n", tx_buf);
             Wifi_SendData(tx_buf);

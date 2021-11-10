@@ -219,7 +219,7 @@ void StartDHT11Task(void const * argument)
   {
     if(DHT11_Read_TempAndHumidity(&dht11_data)==SUCCESS)
 		{
-			      sprintf(tx_buf, "%.2f %.2f\n", dht11_data.temperature, dht11_data.humidity);
+		    sprintf(tx_buf, "%.2f %.2f\n", dht11_data.temperature, dht11_data.humidity);
             Wifi_SendData("AT+CIPSEND=0,12\r\n");
             printf("%s\r\n", tx_buf);
             Wifi_SendData(tx_buf);

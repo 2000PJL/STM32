@@ -1,0 +1,14 @@
+can485dht11wifi228\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/croutine.c
+can485dht11wifi228\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+can485dht11wifi228\croutine.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+can485dht11wifi228\croutine.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+can485dht11wifi228\croutine.o: ../Core/Inc/FreeRTOSConfig.h
+can485dht11wifi228\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+can485dht11wifi228\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+can485dht11wifi228\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+can485dht11wifi228\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+can485dht11wifi228\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+can485dht11wifi228\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+can485dht11wifi228\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+can485dht11wifi228\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/croutine.h
+can485dht11wifi228\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
