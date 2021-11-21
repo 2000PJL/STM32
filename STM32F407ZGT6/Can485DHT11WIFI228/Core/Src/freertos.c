@@ -185,7 +185,7 @@ void StartMainTask(void const * argument)
 		  temp2[0]=message[3],temp2[1]=message[4],temp2[2]=message[5],temp2[3]=message[6];
 		  sprintf((char *)wifi_sendmessage,"采集到的湿度为%s%%,温度为%s℃",temp1,temp2);
 		  Wifi_SendData("AT+CIPSEND=0,30\r\n");
-		  printf("数据已发送");
+		  printf("can发送的数据为：%s",message);
 		  osDelay(100);
 		  Wifi_SendData((char *)wifi_sendmessage);
 	  }
@@ -216,7 +216,7 @@ void StartCanSendTask(void const * argument)
   {
 	CAN_TRANSMIT1((uint8_t *)DHT11_buffer);
     osDelay(500);
-	//  printf("%s",DHT11_buffer);
+	  printf("can发送的数据为：%s",DHT11_buffer);
   }
   /* USER CODE END StartCanSendTask */
 }

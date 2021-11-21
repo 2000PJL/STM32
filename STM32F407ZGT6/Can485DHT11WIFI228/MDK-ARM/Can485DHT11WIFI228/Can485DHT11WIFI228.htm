@@ -3,7 +3,7 @@
 <title>Static Call Graph - [Can485DHT11WIFI228\Can485DHT11WIFI228.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image Can485DHT11WIFI228\Can485DHT11WIFI228.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Wed Nov 10 09:38:32 2021
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Wed Nov 10 21:24:47 2021
 <BR><P>
 <H3>Maximum Stack Usage =        264 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1146,11 +1146,12 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f407xx.o(RESET)
 </UL>
-<P><STRONG><a name="[65]"></a>StartCanSendTask</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, freertos.o(i.StartCanSendTask))
+<P><STRONG><a name="[65]"></a>StartCanSendTask</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, freertos.o(i.StartCanSendTask))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = StartCanSendTask &rArr; osDelay &rArr; vTaskDelay &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CAN_TRANSMIT1
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> freertos.o(.constdata)
 </UL>
@@ -1164,7 +1165,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> freertos.o(.constdata)
 </UL>
-<P><STRONG><a name="[64]"></a>StartMainTask</STRONG> (Thumb, 138 bytes, Stack size 80 bytes, freertos.o(i.StartMainTask))
+<P><STRONG><a name="[64]"></a>StartMainTask</STRONG> (Thumb, 140 bytes, Stack size 80 bytes, freertos.o(i.StartMainTask))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = StartMainTask &rArr; osDelay &rArr; vTaskDelay &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadSuspend
@@ -1284,6 +1285,7 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CAN_TRANSMIT1
 <LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartMainTask
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartCanSendTask
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Wifi_SendCmd
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Wifi_Reset
 <LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Wifi_Interrupt
