@@ -28,7 +28,10 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "blue.h"
+#include "RS485.h"
+
 extern uint8_t rxBuffer;
+extern uint8_t RS485_buffer;
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -99,6 +102,7 @@ int main(void)
   MX_UART5_Init();
   MX_TIM7_Init();
   /* USER CODE BEGIN 2 */
+  HAL_UART_Receive_IT(&rs485usart,&RS485_buffer,1);
    HAL_UART_Receive_IT(&blueUsart,&rxBuffer,1);
   /* USER CODE END 2 */
 

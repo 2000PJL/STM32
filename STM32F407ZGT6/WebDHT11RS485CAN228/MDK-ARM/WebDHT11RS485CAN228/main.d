@@ -54,3 +54,4 @@ webdht11rs485can228\main.o: ../Core/Inc/blue.h
 webdht11rs485can228\main.o: ../Core/Inc/usart.h
 webdht11rs485can228\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 webdht11rs485can228\main.o: ../Core/Inc/gpio.h
+webdht11rs485can228\main.o: ../Core/Inc/RS485.h

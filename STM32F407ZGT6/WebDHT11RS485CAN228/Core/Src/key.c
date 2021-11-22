@@ -1,6 +1,5 @@
 #include "key.h"
 
-
 int key_value = -1;
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
@@ -8,7 +7,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 	if(GPIO_Pin == KEY0_Pin)
 	{
 		LED0_ON();
-		key_value=0;
+        key_value=0;
 	}
 	else if(GPIO_Pin == KEY1_Pin) 
 	{

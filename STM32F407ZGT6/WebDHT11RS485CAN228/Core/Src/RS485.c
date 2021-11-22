@@ -1,4 +1,8 @@
 #include "rs485.h"
+#include "FreeRTOS.h"
+#include "task.h"
+#include "main.h"
+#include "cmsis_os.h"
 
 //接收缓存区 	
 uint8_t RS485_buffer;
@@ -24,24 +28,25 @@ void init_rs485(void)
 * message:要发送的消息 timeout:最大等待多少个100ms
 * return: 0:对方并未收到消息 1:对方成功收到消息
 */
-char final[128];
+
 int rs485_sendData(char *message,int timeout)
 {
+	char final[128];
 	int flag = 0;
 	set_rs485_state(1);
 	memset(final,0,128);
 	sprintf(final,"#%s$",message);
-	HAL_UART_Transmit(&rs485usart,(uint8_t*)final,strlen(final),1000);
+	HAL_UART_Transmit_IT(&rs485usart,(uint8_t*)final,strlen(final));
 	while(timeout--)
 	{
-		HAL_Delay(100);
+		osDelay(100);
 		if(get_toReceiveState())  //如果接收机收到信息
 		{
 			flag = 1;
 			printf("\r\n对方成功收到消息\r\n");
 			break;
 		}
-//		printf("%d ",timeout);
+		printf("%d ",timeout);
 	}
 	reset_toReceiveState(); //恢复消息接收标志
 	set_rs485_state(0);
