@@ -45,10 +45,3 @@ webdht11rs485can228\rs485.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/
 webdht11rs485can228\rs485.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
 webdht11rs485can228\rs485.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
 webdht11rs485can228\rs485.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
-webdht11rs485can228\rs485.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
-webdht11rs485can228\rs485.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
-webdht11rs485can228\rs485.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
-webdht11rs485can228\rs485.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
-webdht11rs485can228\rs485.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
-webdht11rs485can228\rs485.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
-webdht11rs485can228\rs485.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h

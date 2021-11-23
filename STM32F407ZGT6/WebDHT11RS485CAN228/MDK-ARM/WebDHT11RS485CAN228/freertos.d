@@ -56,4 +56,3 @@ webdht11rs485can228\freertos.o: ../Core/Inc/dht11.h
 webdht11rs485can228\freertos.o: ../Core/Inc/delay.h
 webdht11rs485can228\freertos.o: ../Core/Inc/tim.h
 webdht11rs485can228\freertos.o: ../Core/Inc/hr04.h
-webdht11rs485can228\freertos.o: ../Core/Inc/key.h

@@ -30,7 +30,7 @@
 #include "RS485.h"
 #include "dht11.h"
 #include "hr04.h"
-#include "key.h"
+
 
 extern uint8_t RS485_receive_str[];
 extern int key_value;
@@ -130,11 +130,11 @@ void MX_FREERTOS_Init(void) {
   DHT11TaskHandle = osThreadCreate(osThread(DHT11Task), NULL);
 
   /* definition and creation of MainTask */
-  osThreadDef(MainTask, StartMainTask, osPriorityBelowNormal, 0, 256);
+  osThreadDef(MainTask, StartMainTask, osPriorityIdle, 0, 512);
   MainTaskHandle = osThreadCreate(osThread(MainTask), NULL);
 
   /* definition and creation of VoiceTask */
-  osThreadDef(VoiceTask, StartVoiceTask, osPriorityBelowNormal, 0, 256);
+  osThreadDef(VoiceTask, StartVoiceTask, osPriorityBelowNormal, 0, 512);
   VoiceTaskHandle = osThreadCreate(osThread(VoiceTask), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
@@ -153,16 +153,15 @@ void MX_FREERTOS_Init(void) {
 void StartDHT11Task(void const * argument)
 {
   /* USER CODE BEGIN StartDHT11Task */
-	init_rs485();
   /* Infinite loop */
   for(;;)
   {
     osDelay(1000);
 	if(DHT11_Read_TempAndHumidity(&DHT11_Data)==SUCCESS)
     {
-      sprintf(DHT11_buffer,"%.0f,%.0f",DHT11_Data.humidity,DHT11_Data.temperature);
- 	  rs485_sendData(DHT11_buffer, 5);
-	  printf("%s",DHT11_buffer);
+      sprintf(DHT11_buffer,"%.0f,%.1f",DHT11_Data.humidity,DHT11_Data.temperature);
+ 	  rs485_sendData(DHT11_buffer, strlen(DHT11_buffer));
+	  memset(RS485_receivemsg, 0, 32);
     }
   }
   /* USER CODE END StartDHT11Task */
@@ -184,8 +183,7 @@ void StartMainTask(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-
-	  osDelay(500);
+	  osDelay(1000);
 	  switch(key_value)
 	  {
 		  case 0: 
@@ -198,11 +196,7 @@ void StartMainTask(void const * argument)
 		  }
 		  case 2: 
 		  {
-			    distance=Hcsr04_StateRead();
-				sprintf(blue_sendmsg,"#,1,%.2f,0,0,$",distance);
-				blue_send(blue_sendmsg);
-				printf("æ‡¿Î «£∫%lf\r\n",distance);
-			 osThreadResume(VoiceTaskHandle);
+			  osThreadResume(VoiceTaskHandle);
 		  }
 		  case 3: 
 		  {
@@ -213,24 +207,43 @@ void StartMainTask(void const * argument)
 	  if(strcmp("OLED",rxBuff)==0)
 	  {
 		  LED2_ON();
+		  rs485_sendData("OL", strlen("OL"));
+		  
 	  }else if(strcmp("CLED",rxBuff)==0)
 	  {
 		  LED2_OFF();
+		  rs485_sendData("CL", strlen("CL"));
 	  }else if(strcmp("OBEEP",rxBuff)==0)
 	  {
 		  BEEP_ON();
+		  rs485_sendData("OB", strlen("OB"));
 	  }else if(strcmp("CBEEP",rxBuff)==0)
 	  {
 		  BEEP_OFF();
+		  rs485_sendData("CB", strlen("CB"));
 	  }
-	  
-	  if(get_message((char*)RS485_receivemsg)==1)
+	  get_message((char*)RS485_receivemsg);
+	  if(strlen(RS485_receivemsg)!=2)
 	  {
-		  sprintf(blue_sendmsg1,"#,2,0,%s,$",RS485_receivemsg);
-		  blue_send(blue_sendmsg1);
-		  printf("%s\r\n",blue_sendmsg1);
+		  sprintf(blue_sendmsg,"#,2,%.1f,%s,$",distance,RS485_receivemsg);
+		  blue_send(blue_sendmsg);
+		  printf("%s\r\n",blue_sendmsg);
+	  }else {
+	  if(strcmp("OL",RS485_receivemsg)==0)
+	  {
+		  LED2_ON();
+		  
+	  }else if(strcmp("CL",RS485_receivemsg)==0)
+	  {
+		  LED2_OFF();
+	  }else if(strcmp("OB",RS485_receivemsg)==0)
+	  {
+		  BEEP_ON();
+	  }else if(strcmp("CB",RS485_receivemsg)==0)
+	  {
+		  BEEP_OFF();
 	  }
-	  osDelay(500);
+	  }
 	  
   }
   /* USER CODE END StartMainTask */
@@ -249,11 +262,10 @@ void StartVoiceTask(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-//    distance=Hcsr04_StateRead();
-//	sprintf(blue_sendmsg,"#,1,%.2f,0,0,$",distance);
-//    blue_send(blue_sendmsg);
-//    printf("æ‡¿Î «£∫%lf\r\n",distance);
-//    osDelay(777);
+    distance=Hcsr04_StateRead();
+  //  blue_send(blue_sendmsg);
+    printf("æ‡¿Î «£∫%lf\r\n",distance);
+    osDelay(777);
   }
   /* USER CODE END StartVoiceTask */
 }
