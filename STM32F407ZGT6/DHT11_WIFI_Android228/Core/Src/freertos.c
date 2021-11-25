@@ -140,8 +140,7 @@ void StartDHT11Task(void const * argument)
   /* Infinite loop */
 	//osThreadSuspend(DHT11TaskHandle);
   for(;;)
-  { 
-		
+  { 	
     if(DHT11_Read_TempAndHumidity(&dht11_data)==SUCCESS)
 		{
 			sprintf(tx_buf, "%.2f %.2f\n", dht11_data.temperature, dht11_data.humidity);
@@ -149,7 +148,6 @@ void StartDHT11Task(void const * argument)
             printf("%s\r\n", tx_buf);
             Wifi_SendData(tx_buf);
             memset(tx_buf, 0, sizeof(tx_buf));
-			
 		}
 		else 
 		{
