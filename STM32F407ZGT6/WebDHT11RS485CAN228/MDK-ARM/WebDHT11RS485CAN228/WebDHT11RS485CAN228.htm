@@ -3,7 +3,7 @@
 <title>Static Call Graph - [WebDHT11RS485CAN228\WebDHT11RS485CAN228.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image WebDHT11RS485CAN228\WebDHT11RS485CAN228.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Mon Nov 22 21:28:46 2021
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Wed Dec 01 17:02:15 2021
 <BR><P>
 <H3>Maximum Stack Usage =        264 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -429,7 +429,7 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bluetooth_interrupt
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rs485_sendData
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rs485_sendData
 </UL>
 
 <P><STRONG><a name="[94]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text))
@@ -449,17 +449,16 @@ Global Symbols
 <P><STRONG><a name="[e1]"></a>strstr</STRONG> (Thumb, 36 bytes, Stack size 12 bytes, strstr.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = strstr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_message
+<BR>[Called By]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_message
 </UL>
 
-<P><STRONG><a name="[c7]"></a>strlen</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, strlen.o(.text))
+<P><STRONG><a name="[ce]"></a>strlen</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, strlen.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartMainTask
-<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartDHT11Task
 <LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;blue_send
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rs485_sendData
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rs485_sendData
 </UL>
 
-<P><STRONG><a name="[cd]"></a>strcmp</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, strcmp.o(.text))
+<P><STRONG><a name="[cb]"></a>strcmp</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, strcmp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = strcmp
 </UL>
 <BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartMainTask
@@ -467,7 +466,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[e2]"></a>strcpy</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, strcpy.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_message
+<BR><BR>[Called By]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_message
 </UL>
 
 <P><STRONG><a name="[6f]"></a>__aeabi_dmul</STRONG> (Thumb, 228 bytes, Stack size 48 bytes, dmul.o(.text))
@@ -487,7 +486,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Hcsr04_StateRead
 </UL>
 
-<P><STRONG><a name="[c5]"></a>__aeabi_f2d</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, f2d.o(.text))
+<P><STRONG><a name="[c6]"></a>__aeabi_f2d</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, f2d.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartDHT11Task
 </UL>
 
@@ -774,7 +773,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rs485_sendData
+<BR>[Called By]<UL><LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rs485_sendData
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DHT11_Read_TempAndHumidity
 </UL>
 
@@ -1013,7 +1012,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bluetooth_interrupt
 <LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rs485_receive_interrupt
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_rs485
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_rs485
 </UL>
 
 <P><STRONG><a name="[b1]"></a>HAL_UART_RxCpltCallback</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, usart.o(i.HAL_UART_RxCpltCallback))
@@ -1032,7 +1031,7 @@ Global Symbols
 <LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_WaitOnFlagUntilTimeout
 </UL>
 <BR>[Called By]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;blue_send
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rs485_sendData
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rs485_sendData
 <LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fputc
 </UL>
 
@@ -1159,15 +1158,14 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f407xx.o(RESET)
 </UL>
-<P><STRONG><a name="[63]"></a>StartDHT11Task</STRONG> (Thumb, 92 bytes, Stack size 16 bytes, freertos.o(i.StartDHT11Task))
+<P><STRONG><a name="[63]"></a>StartDHT11Task</STRONG> (Thumb, 90 bytes, Stack size 16 bytes, freertos.o(i.StartDHT11Task))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = StartDHT11Task &rArr; DHT11_Read_TempAndHumidity &rArr; DHT11_Mode_Out_PP &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay
-<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rs485_sendData
+<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DHT11_Read_TempAndHumidity
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
-<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
+<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> freertos.o(.constdata)
@@ -1175,27 +1173,28 @@ Global Symbols
 <P><STRONG><a name="[64]"></a>StartMainTask</STRONG> (Thumb, 322 bytes, Stack size 8 bytes, freertos.o(i.StartMainTask))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = StartMainTask &rArr; get_message &rArr; rs485_sendData &rArr; HAL_UART_Transmit &rArr; UART_WaitOnFlagUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadSuspend
-<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadResume
+<BR>[Calls]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadSuspend
+<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadResume
 <LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay
 <LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;blue_send
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rs485_sendData
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_rs485
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_message
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rs485_sendData
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_rs485
+<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_message
 <LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
-<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
-<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
+<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> freertos.o(.constdata)
 </UL>
-<P><STRONG><a name="[65]"></a>StartVoiceTask</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, freertos.o(i.StartVoiceTask))
+<P><STRONG><a name="[65]"></a>StartVoiceTask</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, freertos.o(i.StartVoiceTask))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = StartVoiceTask &rArr; Hcsr04_StateRead &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay
+<BR>[Calls]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadSuspend
+<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay
 <LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Hcsr04_StateRead
-<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> freertos.o(.constdata)
 </UL>
@@ -1265,12 +1264,13 @@ Global Symbols
 
 <P><STRONG><a name="[11c]"></a>__1printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
 
-<P><STRONG><a name="[cc]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf))
+<P><STRONG><a name="[c5]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartVoiceTask
 <LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartMainTask
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rs485_sendData
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartDHT11Task
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rs485_sendData
 </UL>
 
 <P><STRONG><a name="[11d]"></a>__c89printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
@@ -1284,12 +1284,12 @@ Global Symbols
 
 <P><STRONG><a name="[11f]"></a>__1sprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0sprintf), UNUSED)
 
-<P><STRONG><a name="[c6]"></a>__2sprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0sprintf))
+<P><STRONG><a name="[c7]"></a>__2sprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0sprintf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __2sprintf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartMainTask
 <LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartDHT11Task
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rs485_sendData
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rs485_sendData
 </UL>
 
 <P><STRONG><a name="[120]"></a>__c89sprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0sprintf), UNUSED)
@@ -1306,7 +1306,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = blue_send &rArr; HAL_UART_Transmit &rArr; UART_WaitOnFlagUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
-<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 </UL>
 <BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartMainTask
 </UL>
@@ -1338,10 +1338,10 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> printfa.o(i.__0printf)
 </UL>
-<P><STRONG><a name="[ce]"></a>get_message</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, rs485.o(i.get_message))
+<P><STRONG><a name="[cd]"></a>get_message</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, rs485.o(i.get_message))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = get_message &rArr; rs485_sendData &rArr; HAL_UART_Transmit &rArr; UART_WaitOnFlagUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rs485_sendData
+<BR>[Calls]<UL><LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rs485_sendData
 <LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;reset_rxbuff
 <LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_rs485_state
 <LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcpy
@@ -1354,10 +1354,10 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_ReadPin
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rs485_receive_interrupt
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_message
+<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_message
 </UL>
 
-<P><STRONG><a name="[ca]"></a>init_rs485</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, rs485.o(i.init_rs485))
+<P><STRONG><a name="[c9]"></a>init_rs485</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, rs485.o(i.init_rs485))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = init_rs485
 </UL>
 <BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Receive_IT
@@ -1413,7 +1413,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_FREERTOS_Init
 </UL>
 
-<P><STRONG><a name="[cb]"></a>osThreadResume</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, cmsis_os.o(i.osThreadResume))
+<P><STRONG><a name="[ca]"></a>osThreadResume</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, cmsis_os.o(i.osThreadResume))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = osThreadResume &rArr; xTaskResumeFromISR &rArr; vPortValidateInterruptPriority
 </UL>
 <BR>[Calls]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;inHandlerMode
@@ -1423,12 +1423,13 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartMainTask
 </UL>
 
-<P><STRONG><a name="[c9]"></a>osThreadSuspend</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, cmsis_os.o(i.osThreadSuspend))
+<P><STRONG><a name="[c8]"></a>osThreadSuspend</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, cmsis_os.o(i.osThreadSuspend))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = osThreadSuspend &rArr; vTaskSuspend
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspend
 </UL>
-<BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartMainTask
+<BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartVoiceTask
+<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartMainTask
 </UL>
 
 <P><STRONG><a name="[fc]"></a>pvPortMalloc</STRONG> (Thumb, 216 bytes, Stack size 24 bytes, heap_4.o(i.pvPortMalloc))
@@ -1450,7 +1451,7 @@ Global Symbols
 
 <P><STRONG><a name="[e3]"></a>reset_rxbuff</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, rs485.o(i.reset_rxbuff))
 <BR><BR>[Called By]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rs485_receive_interrupt
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_message
+<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_message
 </UL>
 
 <P><STRONG><a name="[b3]"></a>rs485_receive_interrupt</STRONG> (Thumb, 86 bytes, Stack size 16 bytes, rs485.o(i.rs485_receive_interrupt))
@@ -1459,32 +1460,31 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Receive_IT
 <LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;reset_rxbuff
 <LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_rs485_state
-<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_RxCpltCallback
 </UL>
 
-<P><STRONG><a name="[c8]"></a>rs485_sendData</STRONG> (Thumb, 92 bytes, Stack size 16 bytes, rs485.o(i.rs485_sendData))
+<P><STRONG><a name="[cc]"></a>rs485_sendData</STRONG> (Thumb, 92 bytes, Stack size 16 bytes, rs485.o(i.rs485_sendData))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = rs485_sendData &rArr; HAL_UART_Transmit &rArr; UART_WaitOnFlagUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
 <LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_rs485_state
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
-<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
+<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 <LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
 <BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartMainTask
-<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartDHT11Task
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_message
+<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_message
 </UL>
 
 <P><STRONG><a name="[e4]"></a>set_rs485_state</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, rs485.o(i.set_rs485_state))
 <BR><BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rs485_sendData
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_rs485
+<BR>[Called By]<UL><LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rs485_sendData
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_rs485
 </UL>
 
 <P><STRONG><a name="[f0]"></a>uxListRemove</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, list.o(i.uxListRemove))
@@ -1583,7 +1583,7 @@ Global Symbols
 <LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
 <LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvTaskIsTaskSuspended
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadResume
+<BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadResume
 </UL>
 
 <P><STRONG><a name="[e7]"></a>vTaskStartScheduler</STRONG> (Thumb, 90 bytes, Stack size 32 bytes, tasks.o(i.vTaskStartScheduler))
@@ -1606,7 +1606,7 @@ Global Symbols
 <LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSwitchContext
 <LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvResetNextTaskUnblockTime
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadSuspend
+<BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadSuspend
 </UL>
 
 <P><STRONG><a name="[fd]"></a>vTaskSuspendAll</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, tasks.o(i.vTaskSuspendAll))
@@ -1697,7 +1697,7 @@ Global Symbols
 <LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvTaskIsTaskSuspended
 <LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortValidateInterruptPriority
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadResume
+<BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadResume
 </UL>
 <P>
 <H3>
@@ -1828,7 +1828,7 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[eb]"></a>inHandlerMode</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, cmsis_os.o(i.inHandlerMode))
-<BR><BR>[Called By]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadResume
+<BR><BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadResume
 </UL>
 
 <P><STRONG><a name="[e8]"></a>makeFreeRtosPriority</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, cmsis_os.o(i.makeFreeRtosPriority))

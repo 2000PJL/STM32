@@ -160,9 +160,10 @@ void StartDHT11Task(void const * argument)
 	if(DHT11_Read_TempAndHumidity(&DHT11_Data)==SUCCESS)
     {
       sprintf(DHT11_buffer,"%.0f,%.1f",DHT11_Data.humidity,DHT11_Data.temperature);
- 	  rs485_sendData(DHT11_buffer, strlen(DHT11_buffer));
+ 	  //rs485_sendData(DHT11_buffer, strlen(DHT11_buffer));
 	  memset(RS485_receivemsg, 0, 32);
-    }
+    }else printf("∂¡»° ß∞‹");
+	printf("%s",DHT11_buffer);
   }
   /* USER CODE END StartDHT11Task */
 }
@@ -259,11 +260,11 @@ void StartMainTask(void const * argument)
 void StartVoiceTask(void const * argument)
 {
   /* USER CODE BEGIN StartVoiceTask */
+	osThreadSuspend(VoiceTaskHandle);
   /* Infinite loop */
   for(;;)
   {
     distance=Hcsr04_StateRead();
-  //  blue_send(blue_sendmsg);
     printf("æ‡¿Î «£∫%lf\r\n",distance);
     osDelay(777);
   }

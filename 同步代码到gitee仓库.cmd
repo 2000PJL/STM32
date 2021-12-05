@@ -5,3 +5,4 @@ set /p var="Please into commit message: "
 @git commit -m  "%VAR%"
 git push STM32_gitee master
 @echo 已经完成
+pause
