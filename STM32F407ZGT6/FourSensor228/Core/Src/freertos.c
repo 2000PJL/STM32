@@ -275,7 +275,9 @@ void StartSonicTask(void const * argument)
   for(;;)
   {
     distance=Hcsr04_StateRead();
+	osDelay(77);
     sprintf(sendmsg1,"%.0f,%d",distance,get_light());
+    osDelay(77);
     rs485_sendData(sendmsg1, 3);
     osDelay(777);
   }
