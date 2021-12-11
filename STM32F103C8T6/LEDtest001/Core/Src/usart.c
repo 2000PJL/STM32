@@ -121,7 +121,7 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
 int fputc(int ch,FILE *f)
 {
   uint8_t temp[1]={ch};
-  HAL_UART_Transmit(&huart1,temp,1,2);
+  HAL_UART_Transmit(&huart1,temp,1,2);  //选择重定向发送的串口1
 	//HAL_UART_Transmit(&huart5,temp,1,2);
   return(ch);
 }

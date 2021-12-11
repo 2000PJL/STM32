@@ -97,7 +97,9 @@ int main(void)
   {
 		HAL_Delay(1000);
 		HAL_GPIO_TogglePin(LED1_GPIO_Port,LED1_Pin);
-		printf(" ‰≥ˆ≤‚ ‘123\r\n");
+		printf("≤‚ ‘123\r\n");
+    HAL_Delay(1000);
+    HAL_GPIO_TogglePin(LED1_GPIO_Port,LED1_Pin);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
