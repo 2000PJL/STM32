@@ -285,7 +285,7 @@ void StartSonicTask(void const * argument)
     distance=Hcsr04_StateRead();
 	osDelay(77);
     sprintf(sendmsg1,"%.0f,%d",distance,get_light());
-	  printf("%s",sendmsg1);
+    printf("%s",sendmsg1);
     osDelay(77);
     //rs485_sendData(sendmsg1, 3);
     cc2530_sendMessage(sendmsg1);

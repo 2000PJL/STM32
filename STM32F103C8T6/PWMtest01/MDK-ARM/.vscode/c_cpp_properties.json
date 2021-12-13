@@ -1,18 +1,18 @@
 {
     "configurations": [
         {
-            "name": "LEDtest001",
+            "name": "PWMtest01",
             "includePath": [
-                "g:\\code\\STM32\\STM32F103C8T6\\LEDtest001\\Core\\Inc",
-                "g:\\code\\STM32\\STM32F103C8T6\\LEDtest001\\Drivers\\STM32F1xx_HAL_Driver\\Inc",
-                "g:\\code\\STM32\\STM32F103C8T6\\LEDtest001\\Drivers\\STM32F1xx_HAL_Driver\\Inc\\Legacy",
-                "g:\\code\\STM32\\STM32F103C8T6\\LEDtest001\\Drivers\\CMSIS\\Device\\ST\\STM32F1xx\\Include",
-                "g:\\code\\STM32\\STM32F103C8T6\\LEDtest001\\Drivers\\CMSIS\\Include",
+                "g:\\code\\STM32\\STM32F103C8T6\\PWMtest01\\Core\\Inc",
+                "g:\\code\\STM32\\STM32F103C8T6\\PWMtest01\\Drivers\\STM32F1xx_HAL_Driver\\Inc",
+                "g:\\code\\STM32\\STM32F103C8T6\\PWMtest01\\Drivers\\STM32F1xx_HAL_Driver\\Inc\\Legacy",
+                "g:\\code\\STM32\\STM32F103C8T6\\PWMtest01\\Drivers\\CMSIS\\Device\\ST\\STM32F1xx\\Include",
+                "g:\\code\\STM32\\STM32F103C8T6\\PWMtest01\\Drivers\\CMSIS\\Include",
                 "D:\\Keil_v5\\ARM\\ARMCC\\include",
                 "D:\\Keil_v5\\ARM\\ARMCC\\include\\rw",
-                "g:\\code\\STM32\\STM32F103C8T6\\LEDtest001\\MDK-ARM",
-                "g:\\code\\STM32\\STM32F103C8T6\\LEDtest001\\Core\\Src",
-                "g:\\code\\STM32\\STM32F103C8T6\\LEDtest001\\Drivers\\STM32F1xx_HAL_Driver\\Src"
+                "g:\\code\\STM32\\STM32F103C8T6\\PWMtest01\\MDK-ARM",
+                "g:\\code\\STM32\\STM32F103C8T6\\PWMtest01\\Core\\Src",
+                "g:\\code\\STM32\\STM32F103C8T6\\PWMtest01\\Drivers\\STM32F1xx_HAL_Driver\\Src"
             ],
             "defines": [
                 "USE_HAL_DRIVER",
