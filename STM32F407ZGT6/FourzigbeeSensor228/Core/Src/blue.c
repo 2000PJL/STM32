@@ -11,6 +11,12 @@
 /* 蓝牙名与密码 */
 unsigned char blueName[] = "PJL";
 unsigned char bluePwd[] = "1234"; //蓝牙密码最多6位且数字
+
+/* config=1时为AT模式,进行密码与名字更改. config=2时正常收发 */
+int config = 2; 
+
+
+
 /* AT指令缓存数组 */
 char cmdBuf[100] = {0};
 
@@ -40,7 +46,7 @@ void BlueConfig_UART_Init(void)
 {
 
   huart3.Instance = USART3;
-  huart3.Init.BaudRate = 9600;
+  huart3.Init.BaudRate = 38400;
   huart3.Init.WordLength = UART_WORDLENGTH_8B;
   huart3.Init.StopBits = UART_STOPBITS_1;
   huart3.Init.Parity = UART_PARITY_NONE;
@@ -62,9 +68,9 @@ uint8_t blue_config(void)
 {
 	BlueConfig_UART_Init();
 	HAL_UART_Receive_IT(&blueUsart,&rxBuffer,1); //接收中断开启
-	printf("请在10s内松开按键\r\n");
-	HAL_Delay(10000);
-	sprintf(cmdBuf,"AT+NAME=%s",blueName);
+	printf("请在5s内松开按键\r\n");
+	HAL_Delay(5000);
+	sprintf(cmdBuf,"AT+NAME=%s\r\n",blueName);
 	if(blue_sendCmd(cmdBuf,50))
 	{
 		printf("名字更改失败,即将重启\r\n");
@@ -75,7 +81,7 @@ uint8_t blue_config(void)
 		printf("名字更改成功!!\r\n");
 	}
 	memset(cmdBuf,0,sizeof(cmdBuf));
-	sprintf(cmdBuf,"AT+PSWD=%s",bluePwd);
+	sprintf(cmdBuf,"AT+PSWD=\"%s\"\r\n",bluePwd);
 	if(blue_sendCmd(cmdBuf,50))
 	{
 		printf("密码更改失败,即将重启\r\n");
@@ -127,24 +133,26 @@ uint8_t blue_sendCmd(char *cmd,int timeout)
 
 void bluetooth_interrupt()
 {
-	if (rxBuffer == '#')
-		{
-			rxCount = 1;
-			memset(rxBuff, 0, sizeof(rxBuff));
-		}
-		else if (rxBuffer == '$')
-		{
-			printf("%s\r\n", rxBuff);
-			rxCount = 0;
-        
-		}
-		else if ((rxCount > 0) && (rxCount < 128))
-		{
-			rxBuff[rxCount - 1] = rxBuffer;
-			rxCount++;
-		}	
-		HAL_UART_Receive_IT(&blueUsart,&rxBuffer,1);
+	if(rxBuffer!=0) 
+	{
+		rxBuff[rxCount] = rxBuffer;
+		rxCount++;
+	}
+	HAL_UART_Receive_IT(&blueUsart,&rxBuffer,1);
 }
 
 
-
+void blue_Init()
+{
+		printf("若不想更改蓝牙名和密码,请直接让config=2,该蓝牙密码为1234");
+	printf("模式一(AT模式)：config=1时进入该模式,在板子上电之前按住按键(不要松开)，\
+          在板子上电后松开按键，此时灯2s闪烁一次,at指令发送更改完名字密码之后，重启板子\r\n");
+	printf("模式二(正常发送)：config=2时进入该模式，配对时灯闪烁很快,波特率为38400,什么都不用管，正常收发\r\n");
+	printf("当前模式为config=%d,注意\r\n",config);
+	if(config==1) 
+	{
+		while(blue_config()==1);
+		printf("请更改代码,让config=2，刷入代码后，断电重启！！ 按复位键不行\r\n");
+		while(1);
+	}
+}

@@ -1,6 +1,5 @@
 --cpu=Cortex-M4.fp.sp
 "foursensor228\startup_stm32f407xx.o"
-"foursensor228\rs485.o"
 "foursensor228\blue.o"
 "foursensor228\delay.o"
 "foursensor228\dht11.o"

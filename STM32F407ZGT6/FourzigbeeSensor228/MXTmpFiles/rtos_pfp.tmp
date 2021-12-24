@@ -1,0 +1,3 @@
+void StartMainTask(void const * argument);
+void StartDHT11Task(void const * argument);
+void StartSonicTask(void const * argument);#n

@@ -24,7 +24,9 @@
 #include "RS485.h"
 #include "cc2530.h"
 
+
 extern uint8_t rxBuffer;
+extern int config;
 /* USER CODE END 0 */
 
 UART_HandleTypeDef huart5;
@@ -369,15 +371,11 @@ int fputc(int ch,FILE *f)
 
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
-	//UNUSED(huart);
+	UNUSED(huart);
 	if(huart->Instance==blueInterrupt)  //ÈôÊÇÀ¶ÑÀÖÐ¶Ï
 	{
-		
 		bluetooth_interrupt();
 		
-	}else if(huart->Instance==USART2)
-	{
-		rs485_receive_interrupt();
 	}else if(huart->Instance==USART6)
 	{
 		cc2530_interrupt();

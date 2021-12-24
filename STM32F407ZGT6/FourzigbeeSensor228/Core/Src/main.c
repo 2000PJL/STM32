@@ -30,6 +30,7 @@
 #include "RS485.h"
 #include "cc2530.h"
 
+
 extern uint8_t rxBuffer;
 extern uint8_t cc2530_rxBuffer;
 /* USER CODE END Includes */
@@ -101,9 +102,11 @@ int main(void)
   MX_USART3_UART_Init();
   MX_USART6_UART_Init();
   /* USER CODE BEGIN 2 */
+
+  blue_Init();
   HAL_UART_Receive_IT(&blueUsart,&rxBuffer,1);
   HAL_UART_Receive_IT(&cc2530Usart,&cc2530_rxBuffer,1);
-  init_rs485();
+
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in freertos.c) */

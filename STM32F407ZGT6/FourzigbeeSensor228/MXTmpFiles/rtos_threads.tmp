@@ -1,0 +1,36 @@
+/* USER CODE BEGIN Header_StartDHT11Task */
+/**
+* @brief Function implementing the DHT11Task thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartDHT11Task */
+void StartDHT11Task(void const * argument)
+{
+#t/* USER CODE BEGIN StartDHT11Task */
+#t/* Infinite loop */
+#tfor(;;)
+#t{
+#t#tosDelay(1);
+#t}
+#t/* USER CODE END StartDHT11Task */
+}
+#n
+/* USER CODE BEGIN Header_StartSonicTask */
+/**
+* @brief Function implementing the SonicTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartSonicTask */
+void StartSonicTask(void const * argument)
+{
+#t/* USER CODE BEGIN StartSonicTask */
+#t/* Infinite loop */
+#tfor(;;)
+#t{
+#t#tosDelay(1);
+#t}
+#t/* USER CODE END StartSonicTask */
+}
+#n

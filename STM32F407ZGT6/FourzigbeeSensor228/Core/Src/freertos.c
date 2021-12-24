@@ -41,7 +41,7 @@ extern char rxBuff[];
 char DHT11_buffer[128];
 char blue_sendmsg[32];
 char sendmsg1[32];
-char RS485_receivemsg[32];
+char cc2530_receivemsg[32];
 char receicemsg1[32]={0};
 char receicemsg2[32]={0};
 double distance;
@@ -155,7 +155,7 @@ void MX_FREERTOS_Init(void) {
 void StartMainTask(void const * argument)
 {
   /* USER CODE BEGIN StartMainTask */
-	 init_rs485();
+
 	/* Infinite loop */
   for(;;)
   {
@@ -188,56 +188,53 @@ void StartMainTask(void const * argument)
 		  }
 	  }
 	  printf("blutooth接收到的数据为：%s\r\n",rxBuff);
-	  
 	  if(strcmp("OLED",rxBuff)==0)
 	  {
 		  LED2_ON();
-		  //rs485_sendData("OL", strlen("OL"));
 		  cc2530_sendMessage("OL");		  
 	  }else if(strcmp("CLED",rxBuff)==0)
 	  {
 		  LED2_OFF();
-		 // rs485_sendData("CL", strlen("CL"));
 		  cc2530_sendMessage("CL");
 	  }else if(strcmp("OBEEP",rxBuff)==0)
 	  {
 		  BEEP_ON();
-		 // rs485_sendData("OB", strlen("OB"));
 		  cc2530_sendMessage("OB");
 	  }else if(strcmp("CBEEP",rxBuff)==0)
 	  {
 		  BEEP_OFF();
-		//  rs485_sendData("CB", strlen("CB"));
 		  cc2530_sendMessage("CB");
 	  }
+
+	  cc2530_getMessage(cc2530_receivemsg);
 	  
-	//  get_message((char*)RS485_receivemsg);
-	  cc2530_getMessage(RS485_receivemsg);
-	  
-	  if(strlen(RS485_receivemsg)==2)
+	  if(strlen(cc2530_receivemsg)==2)
 	  {
-		  if(strcmp("OL",RS485_receivemsg)==0)
+		  if(strcmp("OL",cc2530_receivemsg)==0)
 		  {
 			  LED2_ON();
 			  
-		  }else if(strcmp("CL",RS485_receivemsg)==0)
+		  }else if(strcmp("CL",cc2530_receivemsg)==0)
 		  {
 			  LED2_OFF();
-		  }else if(strcmp("OB",RS485_receivemsg)==0)
+		  }else if(strcmp("OB",cc2530_receivemsg)==0)
 		  {
 			  BEEP_ON();
-		  }else if(strcmp("CB",RS485_receivemsg)==0)
+		  }else if(strcmp("CB",cc2530_receivemsg)==0)
 		  {
 			  BEEP_OFF();
 		  }  
 	  }else {
-		   if(strlen(RS485_receivemsg)==5)
-			  sprintf(receicemsg2,"%s",RS485_receivemsg);
-		  else sprintf(receicemsg1,"%s",RS485_receivemsg);
+		   if(strlen(cc2530_receivemsg)==5)
+			  sprintf(receicemsg2,"%s",cc2530_receivemsg);
+		  else sprintf(receicemsg1,"%s",cc2530_receivemsg);
+		   
+		   
 		  sprintf(blue_sendmsg,"#,%s,%s,$",receicemsg1,receicemsg2);
 		  blue_send(blue_sendmsg);
 		  printf("message is%s\r\n",blue_sendmsg);
 	  }
+	        memset(rxBuff,0,500);
   }
   /* USER CODE END StartMainTask */
 }
@@ -261,7 +258,6 @@ void StartDHT11Task(void const * argument)
     {
        sprintf(DHT11_buffer,"%.0f,%.0f",DHT11_Data.humidity,DHT11_Data.temperature);
 		printf("%s",DHT11_buffer);
-	   //rs485_sendData(DHT11_buffer, 5);
 	   cc2530_sendMessage(DHT11_buffer);
 	}
   }
@@ -287,7 +283,6 @@ void StartSonicTask(void const * argument)
     sprintf(sendmsg1,"%.0f,%d",distance,get_light());
     printf("%s",sendmsg1);
     osDelay(77);
-    //rs485_sendData(sendmsg1, 3);
     cc2530_sendMessage(sendmsg1);
     osDelay(777);
   }

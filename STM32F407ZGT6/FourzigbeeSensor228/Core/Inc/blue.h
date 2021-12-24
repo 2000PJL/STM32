@@ -18,6 +18,8 @@
 void blue_send(char *cmd);
 void BlueConfig_UART_Init(void);
 void bluetooth_interrupt(void);
+void bluetooth_interrupt2(void);
+void blue_Init(void);
 
 uint8_t blue_config(void);
 uint8_t blue_sendCmd(char *cmd,int timeout);
