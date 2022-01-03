@@ -253,7 +253,7 @@ void StartDHT11Task(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-	  osDelay(1077);
+	  osDelay(1977);
 	if(DHT11_Read_TempAndHumidity(&DHT11_Data)==SUCCESS)
     {
        sprintf(DHT11_buffer,"%.0f,%.0f",DHT11_Data.humidity,DHT11_Data.temperature);
@@ -284,7 +284,7 @@ void StartSonicTask(void const * argument)
     printf("%s",sendmsg1);
     osDelay(77);
     cc2530_sendMessage(sendmsg1);
-    osDelay(777);
+    osDelay(1777);
   }
   /* USER CODE END StartSonicTask */
 }
